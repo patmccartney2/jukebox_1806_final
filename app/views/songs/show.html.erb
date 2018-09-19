@@ -1,3 +1,12 @@
 <h1> <%= @song.title %> </h1>
 <p>by <%= @song.artist.name %> </p>
 <p> Rating: <%= @song.number_rating %> </p>
+<% @genres.each do |g| %>
+
+<h5> Genres for <%= @song.title %></h5>
+
+<ul>
+  <li> <%= g.name %></li>
+</ul>
+
+<% end %>
